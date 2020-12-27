@@ -4,15 +4,11 @@ using System.Text;
 
 namespace App
 {
-    partial class NoneTypeChecker : BaseTriangleTypeChecker
+    class IsoscelesTriangleChecker : BaseTriangleTypeChecker
     {
-        public NoneTypeChecker()
-        {
-            defaultType = TriangleType.NONE;
-        }
         protected override bool Process(double edge1, double edge2, double edge3)
         {
-            return edge2 + edge3 > edge1;
+            return edge2 == edge3 || edge1 == edge2;
         }
     }
 }

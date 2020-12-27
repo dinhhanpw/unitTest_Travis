@@ -1,0 +1,10 @@
+language: csharp
+solution: UnitTest_Travis.sln
+mono: none
+dotnet: 3.1
+
+install:
+- dotnet restore UnitTest_Travis.sln
+
+script:
+- dotnet test UnitTest_Travis.sln

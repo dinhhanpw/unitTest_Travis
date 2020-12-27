@@ -4,7 +4,7 @@ using System.Text;
 
 namespace App
 {
-    class Triangle : TriangleTypeCheck
+    class Triangle
     {
         public Point APoint { get; set; }
         public Point BPoint { get; set; }
