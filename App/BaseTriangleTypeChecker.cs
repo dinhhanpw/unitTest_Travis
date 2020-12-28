@@ -8,7 +8,7 @@ namespace App
     {
         protected TriangleType defaultType;
         public BaseTriangleTypeChecker NextChecker { get; set; }
-        private void SortThreeEdge(ref double edge1, ref double edge2, ref double edge3)
+        protected void SortThreeEdge(ref double edge1, ref double edge2, ref double edge3)
         {
             double max, mid, min;
 
@@ -33,7 +33,7 @@ namespace App
 
                 if (edge3 > min)
                 {
-                    min = edge3;
+                    mid = edge3;
                 }
                 else
                 {
@@ -50,7 +50,7 @@ namespace App
 
         public virtual TriangleType Check(double edge1, double edge2, double edge3)
         {
-            SortThreeEdge(ref edge1, ref edge2, ref edge3);
+            //SortThreeEdge(ref edge1, ref edge2, ref edge3);
 
             if (Process(edge1, edge2, edge3))
                 return defaultType;

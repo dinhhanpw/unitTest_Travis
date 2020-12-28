@@ -21,7 +21,7 @@ namespace App
         {
             Double ab = APoint.Distance(BPoint);
             Double ac = APoint.Distance(CPoint);
-            Double bc = APoint.Distance(CPoint);
+            Double bc = BPoint.Distance(CPoint);
 
             return ab + ac + bc;
         }
@@ -30,7 +30,7 @@ namespace App
         {
             Double ab = APoint.Distance(BPoint);
             Double ac = APoint.Distance(CPoint);
-            Double bc = APoint.Distance(CPoint);
+            Double bc = BPoint.Distance(CPoint);
 
             return TriangleTypeCheckerManager.GetChecker().Check(ab, ac, bc);
         }

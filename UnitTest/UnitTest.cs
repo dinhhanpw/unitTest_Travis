@@ -11,10 +11,10 @@ namespace UnitTest
             new object[] {new Point(0,0), new Point(0,1), new Point(0,0), TriangleType.NONE},
             new object[] {new Point(0,0), new Point(0,0), new Point(0,0), TriangleType.NONE},
             new object[] {new Point(0,0), new Point(0,1), new Point(0,2), TriangleType.NONE},
-            new object[] {new Point(2,0), new Point(4,0), new Point(6,0), TriangleType.NORMAL},
+            new object[] {new Point(2,0), new Point(4,0), new Point(0,6), TriangleType.NORMAL},
             new object[] {new Point(0,0), new Point(0,3), new Point(4,0), TriangleType.RIGHT},
             new object[] {new Point(2,0), new Point(3,2*Math.Sqrt(2)), new Point(4,0), TriangleType.ISOSCELES},
-            new object[] {new Point(2,0), new Point(3,3*Math.Sqrt(3)), new Point(4,0), TriangleType.EQUILATERAL},
+            new object[] {new Point(2,0), new Point(3,Math.Sqrt(3)), new Point(4,0), TriangleType.EQUILATERAL},
         };
 
         private static object[] perimeterCase =
@@ -31,7 +31,7 @@ namespace UnitTest
         }
 
         [TestCaseSource(nameof(perimeterCase))]
-        public void TestGetPre(Point a, Point b, Point c, double expectedOutput)
+        public void TestGetPerimeter(Point a, Point b, Point c, double expectedOutput)
         {
             Triangle triangle = new Triangle(a, b, c);
 
