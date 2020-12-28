@@ -4,10 +4,16 @@ using System.Text;
 
 namespace App
 {
-    class Point
+    public class Point
     {
-        public float X { get; set; }
-        public float Y { get; set; }
+        public Double X { get; set; }
+        public Double Y { get; set; }
+
+        public Point(Double x, Double y)
+        {
+            this.X = x;
+            this.Y = y;
+        }
 
         public double Distance(Point point)
         {

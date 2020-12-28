@@ -4,7 +4,7 @@ using System.Text;
 
 namespace App
 {
-    class NormalTriangleChecker : BaseTriangleTypeChecker
+    partial class NormalTriangleChecker : BaseTriangleTypeChecker
     {
         public NormalTriangleChecker()
         {
